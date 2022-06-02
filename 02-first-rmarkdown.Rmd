@@ -1,0 +1,33 @@
+---
+title: "Penguins Data Analysis"
+author: "Adriana Picoral"
+date: "Summer 2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(tidyverse)
+library(palmerpenguins)
+opts_chunk$set(echo = TRUE)
+```
+
+# Penguins Data
+
+```{r}
+# cmd+option+i for macs 
+# ctrl+alt+i for PCs
+glimpse(penguins)
+```
+
+## Create a new dataframe
+
+```{r}
+adelie_penguins <- penguins %>%
+  filter(species == "Adelie")
+
+summary(adelie_penguins)
+```
+
+
+
